@@ -1,8 +1,8 @@
-import { FETCH_POSTS, NEW_POST, LIST_REPOS } from "../actions/types";
+import { FETCH_POSTS, NEW_REPO, LIST_REPOS } from "../actions/types";
 
 const initialState = {
   items: [],
-  item: {},
+  newRepo: {},
   repos: []
 };
 
@@ -15,10 +15,10 @@ export default function(state = initialState, action) {
         ...state,
         items: action.payload
       };
-    case NEW_POST:
+    case NEW_REPO:
       return {
         ...state,
-        item: action.payload
+        newRepo: action.payload
       };
     case LIST_REPOS:
       return {
